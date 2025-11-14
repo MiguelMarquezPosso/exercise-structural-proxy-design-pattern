@@ -47,10 +47,7 @@ proxy-pattern/
 
 ## ⚙️ Configuración
 ### 🔧 Variables de Entorno (.env)
-SERVER_PORT=8080
-DB_URL=jdbc:postgresql://aws-1-us-east-1.pooler.supabase.com:6543/postgres?sslmode=require
-DB_USER=postgres.adejrftvkjjxcnjjangm
-DB_PASSWORD=igj6gBlY8RiwZAK8
+En el archivo .env reemplazar las credenciales por las generadas al crear una base de datos PostgreSQL de Supabase.
 
 ## 🐳 Ejecución con Docker
 docker build -t proxy .

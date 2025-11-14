@@ -9,18 +9,18 @@ Permitir que una aplicación ejecute procesos con diferentes niveles de segurida
 ## 🏗️ Patrones Implementados
 
 ### 🛡️ Patrón Proxy
-Interfaz: InterfaceProcesos
+**Interfaz:** InterfaceProcesos
 
-Proxy Auditor: ProxyProcesos (autenticación + auditoría)
+**Proxy Auditor:** ProxyProcesos (autenticación + auditoría)
 
-Proxy Simple: ProxyProcesosSinAuditoria (solo autenticación)
+**Proxy Simple:** ProxyProcesosSinAuditoria (solo autenticación)
 
-Objeto Real: ProcesoDefecto
+**Objeto Real:** ProcesoDefecto
 
 ### 🏭 Factory Method
-Fábrica: FabricaServicios
+**Fábrica:** FabricaServicios
 
-Selección: Parámetro para elegir tipo de proxy
+**Selección:** Parámetro para elegir tipo de proxy
 
 ## 📁 Estructura del Proyecto
 ```

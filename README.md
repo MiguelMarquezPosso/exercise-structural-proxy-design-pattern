@@ -1,4 +1,5 @@
 # Sistema de Ejecución con Patrón Proxy y Factory
+
 ## 📋 Descripción
 Implementación de un sistema de ejecución de procesos que utiliza el patrón Proxy para controlar el acceso y auditoría, combinado con un Factory Method que permite seleccionar dinámicamente entre diferentes tipos de proxies mediante parámetros.
 
@@ -6,6 +7,7 @@ Implementación de un sistema de ejecución de procesos que utiliza el patrón P
 Permitir que una aplicación ejecute procesos con diferentes niveles de seguridad y auditoría, manteniendo el control de acceso y registro de actividades sin modificar el código del cliente.
 
 ## 🏗️ Patrones Implementados
+
 ### 🛡️ Patrón Proxy
 Interfaz: InterfaceProcesos
 
@@ -46,13 +48,16 @@ proxy-pattern/
 ```
 
 ## ⚙️ Configuración
+
 ### 🔧 Variables de Entorno (.env)
 En el archivo .env reemplazar las credenciales por las generadas al crear una base de datos PostgreSQL de Supabase.
 
 ## 🐳 Ejecución con Docker
+```
 docker build -t proxy .
 
 docker run --env-file .env -p 8080:8080 proxy
+```
 
 ## 🎮 Uso
 El sistema automáticamente ejecuta pruebas que demuestran:
@@ -71,7 +76,7 @@ proceso.EjecutarProcesos(1, "admin", "admin123");
 // Resultado: Solo autentica + ejecuta
 ```
 
-# 🔄 Cambio de Comportamiento
+## 🔄 Cambio de Comportamiento
 Para cambiar el tipo de proxy, simplemente modifica el parámetro en el Factory:
 ```
 // Proxy con autenticación y auditoría
@@ -81,7 +86,7 @@ fabrica.CrearEjecucionProceso(FabricaServicios.PROXY_AUDITABLE);
 fabrica.CrearEjecucionProceso(FabricaServicios.PROXY_SIN_AUDITORIA);
 ```
 
-# 🔐 Flujo de Ejecución
+## 🔐 Flujo de Ejecución
 1. Cliente solicita proceso al Factory
 
 2. Factory devuelve proxy según parámetro

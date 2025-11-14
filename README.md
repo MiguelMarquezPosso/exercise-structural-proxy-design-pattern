@@ -23,30 +23,26 @@ Selección: Parámetro para elegir tipo de proxy
 ## 📁 Estructura del Proyecto
 ```
 proxy-pattern/
-├── src/main/java/
-│   ├── patronproxy/
-│   │   └── PatronProxyMain.java          # Clase principal Spring Boot
+├── src/main/java/co/edu/javeriana/
 │   ├── implementacion/
 │   │   ├── InterfaceProcesos.java        # Interfaz común procesos
 │   │   ├── ProcesoDefecto.java           # Objeto real
 │   │   ├── ProxyProcesos.java            # Proxy con auditoría
 │   │   ├── ProxyProcesosSinAuditoria.java # Proxy sin auditoría
 │   │   └── FabricaServicios.java         # Factory de proxies
-│   ├── servicios/
+│   ├── service/
 │   │   ├── Seguridad.java                # Autenticación con PostgreSQL
 │   │   └── Auditoria.java                # Registro de auditoría
-│   ├── entidades/
+│   ├── model/
 │   │   └── Usuario.java                  # Entidad JPA
-│   ├── repositorios/
+│   ├── repository/
 │   │   └── UsuarioRepository.java        # Repository Spring Data
-│   └── config/
-│       ├── DatabaseConfig.java           # Configuración BD
-│       └── DatabaseConnectionTest.java   # Prueba conexión
+|   └── ProxyApplication.java             # Clase principal Spring Boot
 ├── src/main/resources/
 │   └── application.properties            # Configuración Spring
-├── pom.xml                              # Dependencias Maven
-├── Dockerfile                           # Contenedor Docker
-└── .env                                 # Variables entorno Supabase
+├── pom.xml                               # Dependencias Maven
+├── Dockerfile                            # Contenedor Docker
+└── .env                                  # Variables entorno Supabase
 ```
 
 ## ⚙️ Configuración

@@ -52,6 +52,27 @@ proxy/
 ### 🔧 Variables de Entorno (.env)
 En el archivo .env reemplazar las credenciales por las generadas al crear una base de datos PostgreSQL de Supabase.
 
+## 🗄️ Configuración Base de Datos
+Ejecutar en SQL Editor de Supabase:
+```
+-- Limpiar tablas existentes si las hay
+DROP TABLE IF EXISTS usuarios CASCADE;
+
+CREATE TABLE usuarios (
+    id BIGSERIAL PRIMARY KEY,
+    username VARCHAR(50) UNIQUE NOT NULL,
+    password VARCHAR(100) NOT NULL,
+    activo BOOLEAN DEFAULT true,
+    fecha_creacion TIMESTAMP DEFAULT NOW()
+);
+
+-- Insertar usuarios de prueba
+INSERT INTO usuarios (username, password) VALUES 
+('fbolano', 'pds'),
+('admin', 'admin123'),
+('usuario1', 'password1');
+```
+
 ## 🐳 Ejecución con Docker
 ```
 docker build -t proxy .

@@ -41,7 +41,7 @@ proxy-pattern/
 ├── src/main/resources/
 │   └── application.properties            # Configuración Spring
 ├── pom.xml                               # Dependencias Maven
-├── Dockerfile                            # Contenedor Docker
+├── dockerfile                            # Contenedor Docker
 └── .env                                  # Variables entorno Supabase
 ```
 

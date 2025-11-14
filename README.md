@@ -60,7 +60,7 @@ docker run --env-file .env -p 8080:8080 proxy
 ## 🎮 Uso
 El sistema automáticamente ejecuta pruebas que demuestran:
 
-## Proxy con Auditoría
+Proxy con Auditoría
 ```
 InterfaceProcesos proceso = fabrica.CrearEjecucionProceso("AUDITABLE");
 proceso.EjecutarProcesos(1, "fbolano", "pds");
@@ -84,7 +84,7 @@ fabrica.CrearEjecucionProceso(FabricaServicios.PROXY_AUDITABLE);
 fabrica.CrearEjecucionProceso(FabricaServicios.PROXY_SIN_AUDITORIA);
 ```
 
-🔐 Flujo de Ejecución
+# 🔐 Flujo de Ejecución
 1. Cliente solicita proceso al Factory
 
 2. Factory devuelve proxy según parámetro

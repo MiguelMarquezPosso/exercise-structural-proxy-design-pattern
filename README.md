@@ -81,7 +81,7 @@ docker run --env-file .env -p 8080:8080 proxy
 ```
 
 ## 🎮 Uso
-El sistema automáticamente ejecuta pruebas que demuestran:
+El sistema automáticamente ejecuta pruebas que demuestran
 
 **Proxy con Auditoría:**
 ```

@@ -24,7 +24,7 @@ Permitir que una aplicación ejecute procesos con diferentes niveles de segurida
 
 ## 📁 Estructura del Proyecto
 ```
-proxy-pattern/
+proxy/
 ├── src/main/java/co/edu/javeriana/
 │   ├── implementacion/
 │   │   ├── InterfaceProcesos.java        # Interfaz común procesos
